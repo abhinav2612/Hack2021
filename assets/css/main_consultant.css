@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap');
+
+*{
+	margin:0px;
+	padding:0px;
+	box-sizing:border-box;
+}
+.wrapper21{
+	width:100%;
+	background-color:#fff;
+	min-height:80vh;
+	overflow:hidden;
+}
+.section123{
+	width:90%;
+	display: block;
+	margin:80px auto;
+}
+.left-section123{
+	width:60%;
+	float: left;
+	padding-right:50px;
+}
+.content123{
+	text-align:justify;
+}
+.image-section123{
+	float: right;
+	width:40%;
+}
+.image-section123 video{
+	max-width:100%;
+	height: auto;
+}
+
+.content123 .title123 h2{
+	color:#1c1c1c;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 800;
+	font-size: 40px;
+	line-height:1.5;
+}
+.content123 p{
+	font-family: 'Josefin Sans', sans-serif;
+	padding-top:15px;
+	color:#848484;
+	font-size:22px;
+	font-weight: 800;
+	letter-spacing:0.6px;
+	line-height:1.5;
+}
+.portfolio-btn{
+	width:190px;
+	height: 44px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color:#FFFFFF;
+	text-decoration:none;
+	background-color: #DF013A;
+	border-radius: 20px;
+	box-shadow: 4px 10px 30px rgba(24,139,119,0.2);
+}
+.portfolio-btn:hover{
+	background-color: #8A0829;
+	transition: all ease 0.2s;
+}
+@media screen and (max-width:768px){
+	.left-section123{
+		width:100%;
+		padding-right:0px;
+	}
+	.content123 h2{
+		text-align: center;
+	}
+	.image-section123{
+		width:100%;
+		display: block;
+		margin:50px auto;
+	}
+	.image-section123 video{
+		width:100%
+	}
+}
