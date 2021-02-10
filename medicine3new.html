@@ -21,12 +21,12 @@
 	</table>
     <nav>
       <ul>
-		<li class="logo"><img src="./assets/images/Medicatia_logo1.png" width="10%"></li>
-	    <li class="items"><a href="#">Home</a></li>
-		<li class="items"><a href="#">About</a></li>
-		<li class="items"><a href="#">Chemist</a></li>
-		<li class="items"><a href="#">Doctors</a></li>
-		<li class="items"><a href="#">Contact Us</a></li>
+		<li class="logo"><a href="index.html"><img src="./assets/images/Medicatia_logo1.png" width="10%"></a></li>
+	    <li class="items"><a href="index.html">Home</a></li>
+		<li class="items"><a href="about.html">About</a></li>
+		<li class="items"><a href="chemists.html">Chemists</a></li>
+		<li class="items"><a href="doctors.html">Doctors</a></li>
+		<li class="items"><a href="contact us.html">Contact Us</a></li>
 		<li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
 	  </ul>
 	</nav>
@@ -269,7 +269,16 @@
      </div>
 </div>
  <!--team--section--finish--->
-
+<!--navbar-js-start--->
+    <script>
+      $(document).ready(function(){
+        $('.btn').click(function(){
+          $('.items').toggleClass("show");
+          $('ul li').toggleClass("hide");
+        });
+      });
+    </script>
+	<!--navbar-js-finish--->
 
 </body>
 </html>
