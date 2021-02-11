@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="./assets/css/footer.css">
 	<link rel="stylesheet" href="./assets/css/navbar1.css">
 	<link rel="stylesheet" href="./assets/css/form1.css">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 	 <script
       src="https://kit.fontawesome.com/64d58efce2.js"
       crossorigin="anonymous"
@@ -41,10 +42,12 @@
 	</table>
 	</br></br>
 	<!--work-with-us-form-start-->
+	<form method="post" autocomplete="off" name="google-sheet">
 	<div class="wrapper">
 		<div class="title">
 			DOCTOR CONSULTATION
 		</div>
+		
 		<div class="form">
 			<div class="inputfield">
 				<label>Full Name</label>
@@ -93,23 +96,17 @@
           <label>What are your Health Issues and what symptoms do you have?</label>
           <input type="text" class="input" required />
        </div>
+	   <div class="inputfield">
+        
+		<input type="submit" name="submit" value="Register" class="btn" />
+      </div>
 	</div>
 </div>	
-<div class="wrapper">
-    <div class="form">
-      <div class="inputfield">
-        
-		<input type="submit" value="Register" class="btn" onclick="swal({
-                title: 'Thank You',
-                text: 'Have a good Day!!',
-                icon: 'success',
-              });" />
-      </div>
-    </div>
-</div>	
+
+</form>	
+ 
 	<!--work-with-us-form-finish-->
 	<br/><br/>
-	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<!--footer-start-->
 	<div class="footer_start">
 	<footer class="footer">
@@ -132,7 +129,7 @@
 				<ul class="box">
 					<li><a href="chemists.html">Chemists</a></li>
 					<li><a href="doctors.html">Doctors</a></li>
-					<li><a href="login_form.html">Login</a></li>
+					<li><a href="login_form.html">Login & Sign-Up</a></li>
 				</ul>
 			</li>
 			<li>
@@ -162,5 +159,19 @@
       });
     </script>
 	<!--navbar-js-finish--->
+	<script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzdt8I_LiTrMca4RiyYS3QwirgVwETj8Hwf2RbWko3NQ2eDjFFIEjqbvg/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
 </html>
