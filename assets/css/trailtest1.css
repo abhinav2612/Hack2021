@@ -1,15 +1,13 @@
- @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
 *, ::before, ::after { box-sizing: border-box; }
 body{
   font-family:'Quicksand', sans-serif;
   text-align:center;
   line-height:1.5em;
 /*   background:#E0E4CC; */
- background: #69d2e7;
-background: -moz-linear-gradient(-45deg, #69d2e7 0%, #a7dbd8 25%, #e0e4cc 46%, #e0e4cc 54%, #f38630 75%, #fa6900 100%);
-background: -webkit-linear-gradient(-45deg, #69d2e7 0%,#a7dbd8 25%,#e0e4cc 46%,#e0e4cc 54%,#f38630 75%,#fa6900 100%);
-background: linear-gradient(135deg, #69d2e7 0%,#a7dbd8 25%,#e0e4cc 46%,#e0e4cc 54%,#f38630 75%,#fa6900 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#69d2e7', endColorstr='#fa6900',GradientType=1 );
+
+  
+
 }
 hr {
   border:none;
@@ -20,11 +18,12 @@ hr {
   margin-left:0; */
 }
 .container {
-  max-width: 800px; 
+  width:100%;
   margin: 1em auto; 
   background:#FFF; 
-  padding:30px;
+  padding:70px;
   border-radius:5px;
+  
 }
 .productcont {
   display: flex; 
@@ -32,16 +31,11 @@ hr {
 .product {
   padding:1em; 
   border:1px solid #E0E4CC; 
-  margin-right:1em; 
+   margin-right:0em; 
   border-radius:5px;
+  width:25%;
+  
 }
-.products img{
-	display: block;
-	width: 40%;
-        height:270px;
-	border-radius: 8px;
-}
-
 .cart-container {
   border:1px solid #E0E4CC;
   border-radius:5px;
@@ -49,19 +43,20 @@ hr {
   padding:1em;
 }
 button, input[type="submit"] { 
-    border:1px solid #FA6900; 
+    border:1px solid black; 
     color:#fff; 
-    background: #F38630; 
+    background:MediumSeaGreen; 
     padding:0.6em 1em;
     font-size:1em; 
     line-height:1; 
     border-radius: 1.2em;
+	width:200px;
     transition: color 0.2s ease-in-out, background 0.2s ease-in-out, border-color 0.2s ease-in-out;
 }
 button:hover, button:focus, button:active, input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:active {
-    background: #A7DBD8;
+    background:white;
     border-color:#69D2E7;
-    color:#000;
+    color:black;
     cursor: pointer;
 }
 table {
@@ -98,4 +93,30 @@ table td:nth-last-child(1) {
   color:#679996;
   padding:0.5em 0;
   margin:1em 0;
+}
+@media(max-width: 991px){
+	.container {
+       width:100%;
+	}
+	.productcont{
+      flex-direction: column;
+	  align-items:center;
+   }
+   .product{
+	   width:120%;
+   }
+
+}
+
+@media(max-width: 767px){
+	.container {
+       width:100%;
+	}
+	.productcont{
+      flex-direction: column;
+	  align-items:center;
+   }
+   .product{
+	   width:120%;
+   }
 }

@@ -36,7 +36,7 @@ function addToCart(elem) {
     //convert product data to JSON for storage
     var stringProduct = JSON.stringify(product);
     /*send product data to session storage */
-    
+   
     if(!sessionStorage.getItem('cart')){
         //append product JSON object to cart array
         cart.push(stringProduct);
@@ -54,7 +54,7 @@ function addToCart(elem) {
         cart.push(stringProduct);
         //cart back to JSON
         stringCart = JSON.stringify(cart);
-        //overwrite cart data in sessionstorage 
+        //overwrite cart data in sessionstorage
         sessionStorage.setItem('cart', stringCart);
         addedToCart(getproductName);
         updateCartTotal();
@@ -71,7 +71,7 @@ function updateCartTotal(){
     if(sessionStorage.getItem('cart')) {
         //get cart data & parse to array
         var cart = JSON.parse(sessionStorage.getItem('cart'));
-        //get no of items in cart 
+        //get no of items in cart
         items = cart.length;
         //loop over cart array
         for (var i = 0; i < items; i++){
@@ -84,7 +84,7 @@ function updateCartTotal(){
             carttable += "<tr><td>" + productname + "</td><td>$" + price.toFixed(2) + "</td></tr>";
             total += price;
         }
-        
+       
     }
     //update total on website HTML
     document.getElementById("total").innerHTML = total.toFixed(2);
